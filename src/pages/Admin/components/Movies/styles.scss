@@ -1,0 +1,165 @@
+.movies {
+  align-items: center;
+  font-size: 15px;
+
+  hr {
+    margin: 25px 0;
+    height: 0;
+    border: 0.5px solid rgb(114, 114, 114);
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .search {
+      display: flex;
+      width: 30%;
+      padding: 5px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid lightgray;
+
+      input {
+        width: 100%;
+        padding: 5px;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    select {
+      padding: 10px;
+      outline: none;
+      margin: 0 5px;
+      border: 1px solid lightgray;
+      font-weight: 700;
+      font-size: 14px;
+      color: #666;
+
+      option {
+        font-weight: 700;
+      }
+    }
+    
+  }
+  .center {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    .add-new {
+      display: flex;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      border: 1px solid rgb(141, 141, 141);
+      background: #fff;
+      color: #555;
+
+      &:hover {
+        background: #4d2fb9;
+        color: #fff;
+      }
+    }
+
+    .table {
+      width: 99%;
+      margin: auto;
+
+      // caption {
+      //   margin: 10px 0;
+      // }
+      thead {
+        color: #fff;
+        background: black;
+        tr {
+          th {
+            font-size: 15px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            font-size: 13px;
+            font-weight: 500;
+            font-family: "Poppins", sans-serif;
+          }
+
+          .icon-button {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+              background: black;
+              outline: none;
+              border: none;
+              padding: 3px 5px;
+              margin: 0 5px;
+              border-radius: 5px;
+
+              .icon {
+                color: #fff;
+                font-size: 15px;
+              }
+
+              &:hover {
+                background: rgb(0,0,150);
+              }
+            }
+            button:nth-child(2) {
+              background: rgb(238, 42, 42);
+
+              &:hover {
+                background: rgb(190,0,0);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      margin-top: 50px;
+
+      .page-item {
+        padding: 0 5px;
+        .page-link {
+          border: 0.5px solid rgb(163, 163, 163);
+          padding: 5px 15px;
+          font-weight: 600;
+          font-size: 15px;
+          color: #444;
+
+          &:hover {
+            background: #6439ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .modal {
+    form {
+      label {
+        font-weight: 700;
+      }
+    }
+  }
+}
