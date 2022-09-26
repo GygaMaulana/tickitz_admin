@@ -75,7 +75,7 @@ const Movies = () => {
     }));
     axios({
       method: "GET",
-      url: `http://localhost:3006/api/v1/movies`,
+      url: `https://tickitz-debe.herokuapp.com/api/v1/movies`,
     })
       .then((res) => {
         setMovieSchedule({
@@ -109,7 +109,7 @@ const Movies = () => {
       const result = await axios({
         method: "POST",
         data: formData,
-        url: "http://localhost:3006/api/v1/movies",
+        url: "https://tickitz-debe.herokuapp.com/api/v1/movies",
         headers: {
           Authorization: auth.data.token,
         },
@@ -152,7 +152,7 @@ const Movies = () => {
         if (result.isConfirmed) {
           axios({
             method: "DELETE",
-            url: `http://localhost:3006/api/v1/movies/${movieID}`,
+            url: `https://tickitz-debe.herokuapp.com/api/v1/movies/${movieID}`,
           });
           swalWithBootstrapButtons.fire(
             "Deleted!",
@@ -180,7 +180,7 @@ const Movies = () => {
       const result = await axios({
         method: "PATCH",
         data: formData,
-        url: `http://localhost:3006/api/v1/movies/${formEditData.movieID}`,
+        url: `https://tickitz-debe.herokuapp.com/api/v1/movies/${formEditData.movieID}`,
         headers: {
           Authorization: auth.data.token,
         },

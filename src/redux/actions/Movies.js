@@ -25,7 +25,7 @@ export const GetMovies = ({page=1, limit}) => {
       dispatch(GetMoviesRequest())
       axios({
           method: "GET",
-          url: `http://localhost:3006/api/v1/movies${page ? `?page=${page}`:``}${limit ? `&limit=${limit}`:``}`,
+          url: `https://tickitz-debe.herokuapp.com/api/v1/movies${page ? `?page=${page}`:``}${limit ? `&limit=${limit}`:``}`,
         }) .then((res)=> { //ketika sukses, dispatch sucess
           dispatch(GetMoviesSuccess(res.data.data))
       }).catch((err)=> {
